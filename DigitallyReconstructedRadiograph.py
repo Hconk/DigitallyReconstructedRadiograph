@@ -178,7 +178,7 @@ rescaler = RescaleFilterType.New()
 rescaler.SetOutputMinimum(0)
 rescaler.SetOutputMaximum(255)
 rescaler.SetInput(filter.GetOutput())
-WriterType = itk.ImageFileWriter[InputImageType]
+WriterType = itk.ImageFileWriter[OutputImageType]
 writer = WriterType.New()
 itk.GiplImageIOFactory.RegisterOneFactory()
 writer.SetFileName(output_name)
